@@ -697,6 +697,7 @@ public:
     // And the various export options
     void ExportAsPngTo(const Platform::Path &filename);
     void ExportMeshTo(const Platform::Path &filename);
+    void ExportPointCloudTo(const Platform::Path &filename);
     void ExportMeshAsStlTo(FILE *f, SMesh *sm);
     void ExportMeshAsObjTo(FILE *fObj, FILE *fMtl, SMesh *sm);
     void ExportMeshAsThreeJsTo(FILE *f, const Platform::Path &filename,
@@ -711,6 +712,7 @@ public:
                             Vector n, Vector origin,
                             double cameraTan,
                             VectorFileWriter *out);
+    void ExportPointsAsReassemblyShapes(FILE *f, SPointList *pts);
 
     static void MenuAnalyze(Command id);
 
